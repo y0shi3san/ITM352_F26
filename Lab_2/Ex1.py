@@ -1,9 +1,15 @@
+# This script prompts the user to enter a number between 1 and 100,
+# calculates the square of the entered number, and prints the result.
+# Name: Kaili Takara
+# Date: Sept. 2, 2026
+
 value_entered = input("Enter a number between 1 and 100:")
 value_entered = int(value_entered)
 
 value_squared = value_entered ** 2
 
-print("You entered:", value_entered)
-print("The square of the number you entered is:", value_squared)
+# print("You entered:", value_entered)
+# print("The square of the number you entered is:", value_squared)
 
 print(f"You entered: {value_entered} and the square of {value_entered} is: {value_squared}")
+
