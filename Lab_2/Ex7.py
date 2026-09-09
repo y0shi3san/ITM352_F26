@@ -1,4 +1,4 @@
-#
+# This program prompts the user to enter a temperature in Fahrenheit and then converts it to Celsius.
 # Kaili Takara
 # Sept. 4, 2026
 
