@@ -1,9 +1,9 @@
 # create a function that calculates the midpoint between two numbers
 # Kaili Takara
 # Date: Sept 9, 2026
-***
-Create a function—call it midpoint —that takes two numbers as input and returns the value halfway between them. 
-***
+# ***
+# Create a function call it midpoint that takes two numbers as input and returns the value halfway between them. 
+# ***
 
 def midpoint(num1, num2):
     return (num1 + num2) / 2
