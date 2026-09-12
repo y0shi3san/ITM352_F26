@@ -9,3 +9,5 @@ def midpoint(num1, num2):
     return (num1 + num2) / 2
 
 print(midpoint(10, 20))  # output: 15.0
+print(midpoint(1, 10))   # output: 5.5
+
