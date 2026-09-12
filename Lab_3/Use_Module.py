@@ -5,7 +5,7 @@
 # gets two numbers from the user, and prints several
 # formatted math results using f-strings.
 
-from HandyMath import midpoint, squareroot, maximum, minimum
+from HandyMath import midpoint, squareroot, max, min
 
 # Ask the user for two numbers
 num1 = float(input("Enter the first number: "))
@@ -25,7 +25,7 @@ power_result = num1 ** num2
 print(f"{num1} raised to the exponent {num2} is {power_result}.")
 
 # Display the maximum and minimum values
-max_num = maximum(num1, num2)
-min_num = minimum(num1, num2)
+max_num = max(num1, num2)
+min_num = min(num1, num2)
 print(f"The maximum of the two numbers is {max_num}.")
 print(f"The minimum of the two numbers is {min_num}.")

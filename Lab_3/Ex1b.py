@@ -1,4 +1,4 @@
-from cryptography.fernet import Fernet
+from cryptography.fernet import Fernet  # type: ignore[reportMissingImports]
 
 key = Fernet.generate_key()
 cypher_suite = Fernet(key)
