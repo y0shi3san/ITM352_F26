@@ -31,4 +31,6 @@ if (age >= 65):
     print("Welcome senior")
 else:
     print("Welcome non-senior")
+
+    
 print(f"Ticket price is ${price:.2f}")
