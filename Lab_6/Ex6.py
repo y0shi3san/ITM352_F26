@@ -11,4 +11,4 @@ weight_in_pounds_float = float(weight_in_pounds)
 weight_in_kilograms = weight_in_pounds_float * KG_TO_POUNDS
 
 print("The weight you entered:", weight_in_pounds_float)
-print("The weight in Kilograms is:", weight_in_kilograms)
+

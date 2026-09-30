@@ -13,21 +13,24 @@ elif 5 <= len(my_list) <= 10:
 else:
     print("The list has more than 10 elements.")
 
-# Test with several different lengths
-test_lists = [
-    [],                          # 0 elements
-    [1, "two", 3],              # 3 elements
-    [1, 2, 3, 4, 5],            # 5 elements
-    ["a", "b", "c", "d", "e", "f", "g"],   # 7 elements
-    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],      # 10 elements
-    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],  # 11 elements
-    [True, False, "hi", 42, 3.14, "test", 7, 8, 9, 10, 11, 12]  # 12 elements
+# Test with several lists and their expected categories.
+test_cases = [
+    [[], "fewer than 5 elements"],
+    [[1, "two", 3], "fewer than 5 elements"],
+    [[1, 2, 3, 4, 5], "between 5 and 10 elements"],
+    [["a", "b", "c", "d", "e", "f", "g"], "between 5 and 10 elements"],
+    [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "between 5 and 10 elements"],
+    [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "more than 10 elements"],
+    [[True, False, "hi", 42, 3.14, "test", 7, 8, 9, 10, 11, 12], "more than 10 elements"]
 ]
 
-for items in test_lists:
+for items, expected in test_cases:
     if len(items) < 5:
-        print(f"{items} -> fewer than 5 elements")
+        result = "fewer than 5 elements"
     elif 5 <= len(items) <= 10:
-        print(f"{items} -> between 5 and 10 elements")
+        result = "between 5 and 10 elements"
     else:
-        print(f"{items} -> more than 10 elements")
+        result = "more than 10 elements"
+
+    assert result == expected
+    print(f"{items} -> {result}")
