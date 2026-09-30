@@ -263,3 +263,12 @@ print("Scores after adding 5 points:", practice_scores)
 
 if __name__ == "__main__":
 	guessing_game()
+
+prices = [5.99, 3.50, 12.75, 8.00]
+
+total = 0
+
+for price in prices:
+    total += price
+
+print("Total cost:", total)
