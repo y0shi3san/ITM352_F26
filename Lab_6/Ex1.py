@@ -13,4 +13,3 @@ else:
 
 print(is_it_true)
 # print(emotions[3] == "happy" and len(emotions) > 3)
-
