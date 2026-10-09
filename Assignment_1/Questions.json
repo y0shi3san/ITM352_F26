@@ -1,15 +1,50 @@
+# Questions for assignment 1 with categories
+# Kaili Takara
+# October 9, 2026
+
+
 {
   "categories": {
-    "Science": [
+    "Animals": [
       {
-        "question": "What planet is known as the Red Planet?",
-        "options": ["Mars", "Venus", "Jupiter", "Mercury"],
-        "answer": "Mars"
+        "question": "How many vertebrae does a giraffe have?",
+        "options": ["7", "8", "9", "10"],
+        "answer": "7"
       },
       {
-        "question": "What gas do plants absorb from the atmosphere?",
-        "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
-        "answer": "Carbon dioxide"
+        "question": "How many teeth does an elephant have?",
+        "options": ["6", "8", "10", "4"],
+        "answer": "4"
+      }
+      {
+        "question": "What is the largest mammal in the world?",
+        "options": ["African Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+        "answer": "Blue Whale"
+      }
+      {
+        "question": "What is a rhinos horn made of?",
+        "options": ["Keratin", "Ivory", "Bone", "Cartilage"],
+        "answer": "Keratin"
+      }
+      {
+        "question": "How fast does a cheetah run (in mph)?",
+        "options": ["64", "82", "90", "75"],
+        "answer": "75"
+      }
+      {
+        "question": "What is a Sumatrian tiger considered on the IUCN Red List?",
+        "options": ["Least Concern", "Endangered", "Critically Endangered", "Extinct"],
+        "answer": "Critically Endangered"
+      }
+      {
+        "question": "How many rings are on a ring tailed lemur have?",
+        "options": ["20", "13", "9", "18"],
+        "answer": "13"
+      }
+      {
+        "question": "How many species of penguins are there?",
+        "options": ["18", "15", "20", "12"],
+        "answer": "18"
       }
     ],
     "History": [
