@@ -1,15 +1,9 @@
-# First Version of quiz game
-# Kaili Takara 
-# October 2, 2026  
+# Generate an inteactive quiz the include requirements 5 and 8
+# 5.Allow the user to choose a category for their questions
+# 8. Create a separate application that interactively asks for questions and answers and stores them in the proper JSON format. [You may use File I/O]
+# Kaili Takara
+# October 9, 2026
 
-answer = input("What is the capital of France? ")
-if answer == "Paris":
-    print("Correct!")
-else:
-    print(f"The answer is 'Paris', not {answer!r}.")
-
-answer = input("What is the capital of Germany? ")
-if answer == "Berlin":
-    print("Correct!")
-else:
-    print(f"The answer is 'Berlin', not {answer!r}.")
+categories = {
+    "
+}
