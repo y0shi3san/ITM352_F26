@@ -1,22 +1,23 @@
 #
 # Kaili Takara
 # October 7, 2026
+# Interactive quiz system, third version
+# Make a dictionary with the questions and correct answers
 
 questions = {
-    "question": "What is the capital of France?": ["Paris", "Touleuse", "Nice", "Avignon"],
-    "question": "What is the capital of Germany?: ["Berlin", "Munich", "Hamburg", "Frankfurt"],
-    "question": "What is the capital of Italy?": "answer": "Rome",
-    "question": " The last supper was painted by?": "answer": "da Vinci"
+    "What is the capital of France?": ["Paris", "Toulouse", "Nice", "Avignon"],
+    "What is the capital of Germany?": ["Berlin", "Munich", "Hamburg", "Frankfurt"],
+    "The Last Supper was painted by which artist?": ["da Vinci", "Michelangelo", "Raphael", "Caravaggio"],
 }
 
 for question, answers in questions.items():
-    correct answer = answers [0]
-    answer = input(f"(question)")
-    answer = input(f"{question}? ")
+    correct_answer = answers[0]
     for answer in answers:
-        print(f"- (answes)")
-        ``
+        print(f"- {answer}")
+        
+    answer = input(f"{question} ")
     if answer == correct_answer:
         print("Correct!")
     else:
-        print(f"The answer is '{correct_anwser}', not {answer!r}.")
+        print(f"The answer is '{correct_answer}', not {answer!r}.")
+        
