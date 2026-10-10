@@ -47,16 +47,46 @@
         "answer": "18"
       }
     ],
-    "History": [
+    "F1": [
       {
-        "question": "Who was the first president of the United States?",
-        "options": ["Abraham Lincoln", "George Washington", "Thomas Jefferson", "John Adams"],
-        "answer": "George Washington"
+        "question": "Who are the two drivers for Mercedies?",
+        "options": ["Lewis Hamilton & Geroge Russell", "Nicolas Lapierre & Oscar Piastri", "Max Verstappen & Yuki Tsunoda", "Geroge Russell & Kimi Antonelli"],
+        "answer": "Geroge Russell & Kimi Antonelli"
       },
       {
-        "question": "Which ancient civilization built Machu Picchu?",
-        "options": ["Romans", "Mayans", "Aztecs", "Inca"],
-        "answer": "Inca"
+        "question": "Which of these places are not a race location?",
+        "options": ["Monaco", "Abu Dabi", "Suzuka", "Portugal"],
+        "answer": "Portugal"
+      }
+      {
+        "question": "How many points does a driver get for winning a race?",
+        "options": ["25", "20", "15", "10"],
+        "answer": "25"
+      }
+      {
+        "question": "How many teams are in Formula 1?",
+        "options": ["10", "12", "11", "17"],
+        "answer": "11"
+      }
+      {
+        "question":"What is the average time (in seconds) a diver spends on a pitstop?",
+        "options": ["2.2-2.8", "1.8-2.4", "2.5-3.1", "3.3-3.9"],
+        "answer": "2.2-2.8"
+      }
+      {
+        "question": "In 2026, who has been driving the longest in Formula 1?",
+        "options": ["Lewis Hamilton", "Max Verstappen", "Nico Hülkenberg", "Fernando Alonso"],
+        "answer": "Fernando Alonso"
+      }
+      {
+        "question": "Who are the two drivers for Red Bull Racing?",
+        "options": ["Lewis Hamilton & Max Verstappen", "Max Verstappen & Isack Hadjar", "Max Verstappen & Yuki Tsunoda", "Geroge Russell & Max Verstappen"],
+        "answer": "Max Verstappen & Yuki Tsunoda"
+      }
+      {
+        "question": "Who are the two drivers for Ferrari?",
+        "options": ["Lewis Hamilton & Max Verstappen", "Charles Leclerc & Carlos Sainz", "Ollie Bearman & Alex Albon", "Charles Leclerc & Lewis Hamilton"],
+        "answer": "Charles Leclerc & Lewis Hamilton"
       }
     ],
     "Technology": [
