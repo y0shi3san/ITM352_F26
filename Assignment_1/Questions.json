@@ -115,6 +115,21 @@
         "options": ["Valorant", "League of Legends", "2XKO", "Wild Rift"],
         "answer": "2XKO"
       }
+      {
+        "question": "What does 'FPS' stand for in video games?",
+        "options": ["First Person Shooter", "Fastest Player Speed", "Frame Per Second", "Free Play Session"],
+        "answer": "First Person Shooter"
+      }
+      {
+        "question": "What are the two names of the brothers in the famous Nintendo franchise?",
+        "options": ["Mario", "Luigi", "Link", "Samus", "Pikachu, Ash", "Wario, Waluigi"],
+        "answer": "Mario, Luigi"
+      }
+      {
+        "question": "Which one of these games are NOT a first-person shooter?",
+        "options": ["Call of Duty", "Overwatch", "Fortnite", "Counter-Strike"],
+        "answer": "Fortnite"
+      }
     ]
   }
 }
