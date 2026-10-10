@@ -89,16 +89,31 @@
         "answer": "Charles Leclerc & Lewis Hamilton"
       }
     ],
-    "Technology": [
+    "Video Games": [
       {
-        "question": "What does CPU stand for?",
-        "options": ["Central Processing Unit", "Computer Power Unit", "Central Program Utility", "Control Processing Unit"],
-        "answer": "Central Processing Unit"
+        "question": "What company made Valorant?",
+        "options": ["Riot Games", "Blizzard Entertainment", "Epic Games", "Aggro Crab"],
+        "answer": "Riot Games"
       },
       {
-        "question": "Which language is commonly used to build web pages?",
-        "options": ["Python", "HTML", "C++", "SQL"],
-        "answer": "HTML"
+        "question": "What is Nintendo's most popular game?",
+        "options": ["Super Mario Bros", "The Legend of Zelda", "Pokémon", "Wii Sports"],
+        "answer": "Wii Sports"
+      }
+      {
+        "question": "What is the most popular PC video game distributor?",
+        "options": ["Steam", "Epic Games Store", "Battle.net", "Ubisoft"],
+        "answer": "Steam"
+      }
+      {
+        "question": "What is the most bought video game device?",
+        "options": ["3DS", "Xbox Series X", "Nintendo Switch", "PlayStation 2"],
+        "answer": "Playstation 2"
+      }
+      {
+        "question": "Which of these Riot Games is the most recently released?",
+        "options": ["Valorant", "League of Legends", "2XKO", "Wild Rift"],
+        "answer": "2XKO"
       }
     ]
   }
