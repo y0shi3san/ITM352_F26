@@ -33,7 +33,7 @@
         "answer": "Critically Endangered"
       },
       {
-        "question": "How many rings does a ring tailed lemur have?",
+        "question": "How many rings does a ring tailed lemur have on it's tail?",
         "options": ["20", "13", "9", "18"],
         "answer": "13"
       },
@@ -41,7 +41,7 @@
         "question": "How many species of penguins are there?",
         "options": ["18", "15", "20", "12"],
         "answer": "18"
-      },
+      }
     ],
     "F1": [
       {
@@ -83,7 +83,7 @@
         "question": "Who are the two drivers for Ferrari?",
         "options": ["Lewis Hamilton & Max Verstappen", "Charles Leclerc & Carlos Sainz", "Ollie Bearman & Alex Albon", "Charles Leclerc & Lewis Hamilton"],
         "answer": "Charles Leclerc & Lewis Hamilton"
-      },
+      }
     ],
     "Video Games": [
       {

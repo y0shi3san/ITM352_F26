@@ -7,40 +7,52 @@
 from string import ascii_lowercase
 import random
 import json
+import os
 
-question_file = open("questions.json", "r")
-questions = json.load(question_file)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+json_path = os.path.join(script_dir, "Questions.json")
+
+with open(json_path, "r", encoding="utf-8") as question_file:
+    questions = json.load(question_file)
+
 
 
 NUM_QUESTIONS_PER_QUIZ = 5
 
-def prepare_questions(questions, num_questions):
-    num_questions = min(num_questions, len(questions))
-    return random.sample(list(questions.items()), k=num_questions)
+def prepare_questions(data, num_questions):
+    all_questions = []
+    for category in data["categories"].values():
+        all_questions.extend(category)
+
+    num_questions = min(num_questions, len(all_questions))
+    return random.sample(all_questions, k=num_questions)
 
 
-def get_answer(question, alternatives):
-    labeled_answers = dict(zip(ascii_lowercase, alternatives))
+def get_answer(question_text, options):
+    print(f"\n{question_text}") 
+    for index, choice in enumerate(options):
+        print(f"  {ascii_lowercase[index]}. {choice}")
 
-    for label, answer in labeled_answers.items():
-        print(f"{label}. {answer}")
-        
-    while (answer_label := input("Choice? ").lower()) not in labeled_answers:
-        print(f"Invalid choice. Please select one of {', '.join(labeled_answers.keys())}.")
-
-    answer = labeled_answers.get(answer_label)
-    return labeled_answers[answer_label]
+    while True:
+        selection = input("Enter your answer (a-d): ").strip().lower()
+        if selection in ascii_lowercase[:len(options)]:
+            return options[ascii_lowercase.index(selection)]
+        print("Invalid choice. Please enter one of the listed letters.")
 
 
-def ask_question(question, alternatives):    
-    correct_answer = alternatives[0]
-    ordered_alternatives = random.sample(alternatives, k=len(alternatives))
+def ask_question(question_data):
+    question = question_data["question"]
+    options = question_data["options"][:]
+    correct_answer = question_data["answer"]
+
+    ordered_alternatives = random.sample(options, k=len(options))
     answer = get_answer(question, ordered_alternatives)
+
     if answer == correct_answer:
         print("Correct!")
         return 1
     else:
-        print(f"The answer is '{correct_answer!r}', not {answer!r}.")
+        print(f"The answer is {correct_answer!r}, not {answer!r}.")
         return 0
 
 
@@ -49,9 +61,8 @@ questions = prepare_questions(questions, NUM_QUESTIONS_PER_QUIZ)
 
 num_correct = 0
 
-# Main Loop
-for num, (question, answers) in enumerate(questions, start=1):
-    print(f"\nQuestion {num}: {question}")
-    num_correct += ask_question(question, answers)
+for num, question_data in enumerate(questions, start=1):
+    print(f"\nQuestion {num}: {question_data['question']}")
+    num_correct += ask_question(question_data)
 
 print(f"\nYou got {num_correct} correct.")
