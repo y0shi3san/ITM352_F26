@@ -15,37 +15,37 @@
         "question": "How many teeth does an elephant have?",
         "options": ["6", "8", "10", "4"],
         "answer": "4"
-      }
+      },
       {
         "question": "What is the largest mammal in the world?",
         "options": ["African Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
         "answer": "Blue Whale"
-      }
+      },
       {
         "question": "What is a rhinos horn made of?",
         "options": ["Keratin", "Ivory", "Bone", "Cartilage"],
         "answer": "Keratin"
-      }
+      },
       {
         "question": "How fast does a cheetah run (in mph)?",
         "options": ["64", "82", "90", "75"],
         "answer": "75"
-      }
+      },
       {
         "question": "What is a Sumatrian tiger considered on the IUCN Red List?",
         "options": ["Least Concern", "Endangered", "Critically Endangered", "Extinct"],
         "answer": "Critically Endangered"
-      }
+      },
       {
         "question": "How many rings are on a ring tailed lemur have?",
         "options": ["20", "13", "9", "18"],
         "answer": "13"
-      }
+      },
       {
         "question": "How many species of penguins are there?",
         "options": ["18", "15", "20", "12"],
         "answer": "18"
-      }
+      },
     ],
     "F1": [
       {
@@ -57,37 +57,37 @@
         "question": "Which of these places are not a race location?",
         "options": ["Monaco", "Abu Dabi", "Suzuka", "Portugal"],
         "answer": "Portugal"
-      }
+      },
       {
         "question": "How many points does a driver get for winning a race?",
         "options": ["25", "20", "15", "10"],
         "answer": "25"
-      }
+      },
       {
         "question": "How many teams are in Formula 1?",
         "options": ["10", "12", "11", "17"],
         "answer": "11"
-      }
+      },
       {
         "question":"What is the average time (in seconds) a diver spends on a pitstop?",
         "options": ["2.2-2.8", "1.8-2.4", "2.5-3.1", "3.3-3.9"],
         "answer": "2.2-2.8"
-      }
+      },
       {
         "question": "In 2026, who has been driving the longest in Formula 1?",
         "options": ["Lewis Hamilton", "Max Verstappen", "Nico Hülkenberg", "Fernando Alonso"],
         "answer": "Fernando Alonso"
-      }
+      },
       {
         "question": "Who are the two drivers for Red Bull Racing?",
         "options": ["Lewis Hamilton & Max Verstappen", "Max Verstappen & Isack Hadjar", "Max Verstappen & Yuki Tsunoda", "Geroge Russell & Max Verstappen"],
         "answer": "Max Verstappen & Yuki Tsunoda"
-      }
+      },
       {
         "question": "Who are the two drivers for Ferrari?",
         "options": ["Lewis Hamilton & Max Verstappen", "Charles Leclerc & Carlos Sainz", "Ollie Bearman & Alex Albon", "Charles Leclerc & Lewis Hamilton"],
         "answer": "Charles Leclerc & Lewis Hamilton"
-      }
+      },
     ],
     "Video Games": [
       {
@@ -99,32 +99,32 @@
         "question": "What is Nintendo's most popular game?",
         "options": ["Super Mario Bros", "The Legend of Zelda", "Pokémon", "Wii Sports"],
         "answer": "Wii Sports"
-      }
+      },
       {
         "question": "What is the most popular PC video game distributor?",
         "options": ["Steam", "Epic Games Store", "Battle.net", "Ubisoft"],
         "answer": "Steam"
-      }
+      },
       {
         "question": "What is the most bought video game device?",
         "options": ["3DS", "Xbox Series X", "Nintendo Switch", "PlayStation 2"],
         "answer": "Playstation 2"
-      }
+      },
       {
         "question": "Which of these Riot Games is the most recently released?",
         "options": ["Valorant", "League of Legends", "2XKO", "Wild Rift"],
         "answer": "2XKO"
-      }
+      },
       {
         "question": "What does 'FPS' stand for in video games?",
         "options": ["First Person Shooter", "Fastest Player Speed", "Frame Per Second", "Free Play Session"],
         "answer": "First Person Shooter"
-      }
+      },
       {
         "question": "What are the two names of the brothers in the famous Nintendo franchise?",
         "options": ["Mario", "Luigi", "Link", "Samus", "Pikachu, Ash", "Wario, Waluigi"],
         "answer": "Mario, Luigi"
-      }
+      },
       {
         "question": "Which one of these games are NOT a first-person shooter?",
         "options": ["Call of Duty", "Overwatch", "Fortnite", "Counter-Strike"],
