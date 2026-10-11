@@ -33,7 +33,7 @@
         "answer": "Critically Endangered"
       },
       {
-        "question": "How many rings does a ring tailed lemur have on it's tail?",
+        "question": "How many rings are on a tail of a ring tailed lemur have on it's tail?",
         "options": ["20", "13", "9", "18"],
         "answer": "13"
       },
@@ -77,7 +77,7 @@
       {
         "question": "Who are the two drivers for Red Bull Racing?",
         "options": ["Lewis Hamilton & Max Verstappen", "Max Verstappen & Isack Hadjar", "Max Verstappen & Yuki Tsunoda", "George Russell & Max Verstappen"],
-        "answer": "Max Verstappen & Yuki Tsunoda"
+        "answer": "Max Verstappen & Isack Hadjar"
       },
       {
         "question": "Who are the two drivers for Ferrari?",
@@ -104,7 +104,7 @@
       {
         "question": "What is the most bought video game device?",
         "options": ["3DS", "Xbox Series X", "Nintendo Switch", "PlayStation 2"],
-        "answer": "Playstation 2"
+        "answer": "PlayStation 2"
       },
       {
         "question": "Which of these Riot Games is the most recently released?",
@@ -125,6 +125,48 @@
         "question": "Which one of these games are NOT a first-person shooter?",
         "options": ["Call of Duty", "Overwatch", "Fortnite", "Counter-Strike"],
         "answer": "Fortnite"
+      }
+    ],
+    "Sports": [
+      {
+        "question": "How many touches can a team have before passing it over the net in volleyball?",
+        "options": ["3", "4", "5", "6"],
+        "answer": "3"
+      },
+      {
+        "question": "How many downs does a team have in American football?",
+        "options": ["3", "4", "5", "6"],
+        "answer": "4"
+      },
+      {
+        "question": "What is the maximum number of players on the field for a team in soccer?",
+        "options": ["10", "11", "12", "13"],
+        "answer": "11"
+      },
+      {
+        "question": "What is it considered when you stop dribbling and start again in basketball?",
+        "options": ["Traveling", "Double Dribble", "Out of Bounds", "Violation"],
+        "answer": "Double Dribble"
+      },
+      {
+        "question": "In badminton, what is the thing that is hit with a racket?",
+        "options": ["Shuttlecock", "Birdie", "Feather", "Plume"],
+        "answer": "Shuttlecock"
+      },
+      {
+        "question": "In bowling, what is the term for when you have three strikes in a row?",
+        "options": ["Turkey", "Hole-in-One", "Perfect Game", "Strikeout"],
+        "answer": "Turkey"
+      },
+      {
+        "question": "In golf, what is the term for a score of two strokes over par?",
+        "options": ["Bogey", "Eagle", "Birdie", "Albatross"],
+        "answer": "Bogey"
+      },
+      {
+        "question": "In tennis, what is the term for when the score is zero?",
+        "options": ["Love", "Game", "Set", "Match"],
+        "answer": "Love"
       }
     ]
   }
