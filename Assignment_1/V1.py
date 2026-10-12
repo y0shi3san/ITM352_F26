@@ -4,6 +4,9 @@
 # Kaili Takara
 # October 9, 2026
 
+# This version was able to run my quiz using me json file but did not catogarize the different topics, just randomized all questions.
+# This version also only asks 4 questions
+
 from string import ascii_lowercase
 import random
 import json
