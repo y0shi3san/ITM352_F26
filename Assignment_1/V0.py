@@ -2,6 +2,7 @@
 # Kaili Takara
 # October 10, 2026
 
+# This version was not able to run my json file properly
 
 from string import ascii_lowercase
 import random
