@@ -3,10 +3,8 @@
 # loop entirely and print a message when it reaches 8 (using break).
 
 for x in range(10):
-    if x != 5:
-        print(x)
-        continue
-    if x == 8:
-        print("done!")
-        break
-
+     if x == 8:
+            print("done!")
+            break
+     if x != 5:
+             print(x)
