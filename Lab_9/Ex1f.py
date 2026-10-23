@@ -3,12 +3,14 @@
 # Kaili Takara
 # October 21, 2026
 
-with open("names.txt", "a") as file_object:
+with open("names.txt", "r") as file_object:
     contents_list = file_object.readlines()
     print(contents_list)
 
 with open("names.txt", "a") as file_object:
     print("Appending a new name to the file...")
-    file_object.write("John Doe\n")
+    file_object.write("Doe, John\n")
+
+    
 
     
