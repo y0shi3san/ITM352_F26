@@ -1,0 +1,42 @@
+# Import homes data and create a data frame
+# Kaili Takara
+# October 28, 2026
+
+import pandas as pd
+
+homes_data_file = 'https://drive.google.com/file/d/1M-X_bypJJ6K5p6eM6aYBwt1qIizIiIex'
+homes_df = pd.read_csv(homes_data_file)
+print(homes_df.head())
+
+# Print the dimensions of the dataframe
+shape = homes_df.shape
+print("The dimensions of the dataframe are: ", shape)
+
+
+# only keep  properties with more than 500 units and frop the easment coulumn
+df_big = homes_df[homes_df["units"] >= 500]
+df_big = df_big.drop(columns = ['easement'])
+print(df_big.head(10))
+
+# look at the data types
+print(df_big.info())
+
+# Coerce leand_sqft, groww_sqft, and sale_price to numeric
+df_big['land_sqft'] = pd.to_numeric(df_big['landsqft', errors='coerce'])
+df_big['gross_sqft'] = pd.to_numeric(df_big['gross_sqft', errors='coerce'])
+df_big['sales_price'] = pd.to_numeric(df_big['sale_price', errors='coerce'])
+
+
+# look at the datatypes and print the cleaned data
+print("After cleaning...")
+print(df_big.info())
+print(df_big_head(10))
+
+# we have some null values. Drop these
+df_big = df_big.dropna()
+
+# Now drop duplicate records.
+df_big.drop_duplicates()
+print("After dropping duplicate records...")
+print(df_big.info)
+print(df.big.head(10))
