@@ -40,3 +40,9 @@ df_big.drop_duplicates()
 print("After dropping duplicate records...")
 print(df_big.info)
 print(df.big.head(10))
+
+# Filter out 0 sales
+df_big = df_big[df_big ['sale_price'] >0]
+print("After filtering out 0 sales...")
+print(df_big.infor())
+print(df_big.head(10))
