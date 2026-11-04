@@ -1,6 +1,6 @@
-#
-#
-#
+# Ex 1 assignment 2 lab
+# Kaili Takara
+# October 30, 2026
 
 import pandas as pd
 import ssl
