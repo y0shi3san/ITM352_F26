@@ -1,6 +1,6 @@
-#
-#
-#
+# Ex 2 assignment 2 lab 
+# Kaili Takara
+# October 30, 2026
 
 import pandas as pd
 import ssl
@@ -35,5 +35,11 @@ csv_file = "junk.csv"  # Intentionally incorrect path to test error handling
 sales_data = load_csv(csv_file)
 
 # Check if the dataframe was loaded successfully before attempting to print the first 10 rows
-if sales_data is not None:
+try:
+    if sales_data is not None:
+        print(sales_data.head(10))
+
+except Exception as e:
+    print("An error occurred:", e)
     print(sales_data.head(10))
+
