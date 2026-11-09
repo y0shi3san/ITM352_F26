@@ -197,12 +197,7 @@ def main():
     if dataset == "Sales Data":
         csv_file = "https://drive.google.com/uc?id=1ujY0WCcePdotG2xdbLyeECFW9lCJ4t-K&export=download"
     else:
-        csv_file = input(
-            "Enter the alternate sales CSV website URL or file path: "
-        ).strip()
-        if not csv_file:
-            print("An alternate CSV URL or file path is required.")
-            return
+        csv_file = "https://docs.google.com/spreadsheets/d/1-WaMJsVDd4njhRzQnvByh61WbLHL8m_sB0k2E5mnFTo/edit?usp=sharing"
 
     sales_data = load_csv(csv_file)
 
