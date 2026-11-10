@@ -1,6 +1,8 @@
-# Trobleshoot requirement 8
+# Adding V2 to this and adding requirement 2, 8. Add an analytic that shows sales by region and product, showing the percentage of the
+# quantity and total sales per region and product. This percentage should be a new
+# column in the pivot table.
 # Kaili Takara
-# November 9th, 2026
+# November 8th, 2026
 
 
 import pandas as pd
@@ -10,6 +12,17 @@ import time
 
 #Temporary fix
 ssl._create_default_https_context = ssl._create_unverified_context
+
+
+DATASET_SOURCES = {
+    "Sales Data": (
+        "https://drive.google.com/uc?id=1ujY0WCcePdotG2xdbLyeECFW9lCJ4t-K&export=download"
+    ),
+    "Sales Data 2": (
+        "https://docs.google.com/spreadsheets/d/"
+        "1-WaMJsVDd4njhRzQnvByh61WbLHL8m_sB0k2E5mnFTo/export?format=csv&gid=0"
+    ),
+}
 
 
 def load_csv(filepath):
@@ -171,9 +184,42 @@ def show_sales_by_region_and_product(data):
         missing.append("product or produce_name")
     if missing:
         print("Missing required columns:", ", ".join(missing))
-        return
+        return None
 
-    sales = data.assign(total_sales=data["quantity"] * data["unit_price"])
+    numeric_values = {}
+    invalid_rows = pd.Series(False, index=data.index)
+    for column in ("quantity", "unit_price"):
+        cleaned_values = (
+            data[column]
+            .astype("string")
+            .str.replace(r"[$,]", "", regex=True)
+            .str.strip()
+        )
+        converted_values = pd.to_numeric(cleaned_values, errors="coerce")
+        invalid_rows |= converted_values.isna()
+        numeric_values[column] = converted_values
+
+    if invalid_rows.any():
+        print(
+            f"Warning: Skipping {invalid_rows.sum()} row(s) with missing or "
+            "invalid quantity or unit_price values."
+        )
+        for column in ("quantity", "unit_price"):
+            invalid_values = numeric_values[column].isna()
+            if invalid_values.any():
+                examples = data.loc[invalid_values, column].head(5).tolist()
+                print(f"  {column} examples: {examples}")
+
+    valid_rows = ~invalid_rows
+    if not valid_rows.any():
+        print("Cannot calculate sales: no rows have valid quantity and unit_price values.")
+        return None
+
+    sales = data.loc[valid_rows].assign(
+        quantity=numeric_values["quantity"].loc[valid_rows],
+        unit_price=numeric_values["unit_price"].loc[valid_rows],
+    )
+    sales["total_sales"] = sales["quantity"] * sales["unit_price"]
     pivot_table = pd.pivot_table(
         sales,
         index=["sales_region", product_column],
@@ -181,16 +227,19 @@ def show_sales_by_region_and_product(data):
         aggfunc="sum",
     )
     region_totals = pivot_table.groupby(level="sales_region")[["quantity", "total_sales"]].transform("sum")
+    quantity_totals = region_totals["quantity"].where(region_totals["quantity"].ne(0))
+    sales_totals = region_totals["total_sales"].where(region_totals["total_sales"].ne(0))
     pivot_table["quantity_pct_of_region"] = (
-        pivot_table["quantity"].div(region_totals["quantity"]).mul(100)
+        pivot_table["quantity"].div(quantity_totals).mul(100)
     )
     pivot_table["sales_pct_of_region"] = (
-        pivot_table["total_sales"].div(region_totals["total_sales"]).mul(100)
+        pivot_table["total_sales"].div(sales_totals).mul(100)
     )
 
     print("\nSales by region and product (percentages are each product's share of its region):")
     with pd.option_context("display.width", 200, "display.max_columns", None):
         print(pivot_table.round(2))
+    return pivot_table
 
 
 def exit_program(data=None):
@@ -222,20 +271,13 @@ def display_menu():
 
 
 def main():
-    dataset_options = ["Sales Data", "Alternate sales data"]
     dataset = get_user_selection(
-        dataset_options,
+        list(DATASET_SOURCES),
         "\nSelect the sales data to load:",
         required=True,
         single=True,
     )[0]
-
-    if dataset == "Sales Data":
-        csv_file = "https://drive.google.com/uc?id=1ujY0WCcePdotG2xdbLyeECFW9lCJ4t-K&export=download"
-    else:
-        csv_file = "https://docs.google.com/spreadsheets/d/1-WaMJsVDd4njhRzQnvByh61WbLHL8m_sB0k2E5mnFTo/export?format=csv&gid=0"
-
-    sales_data = load_csv(csv_file)
+    sales_data = load_csv(DATASET_SOURCES[dataset])
 
     if sales_data is None:
         return

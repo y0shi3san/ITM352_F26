@@ -1,8 +1,6 @@
-# Adding V2 to this and adding requirement 2, 8. Add an analytic that shows sales by region and product, showing the percentage of the
-# quantity and total sales per region and product. This percentage should be a new
-# column in the pivot table.
+# Trobleshoot requirement 8
 # Kaili Takara
-# November 8th, 2026
+# November 9th, 2026
 
 
 import pandas as pd
@@ -163,8 +161,14 @@ def show_average_sales_by_region(data):
 
 def show_sales_by_region_and_product(data):
     """Show quantities, sales, and each product's share of its region totals."""
-    required = ["sales_region", "product", "quantity", "unit_price"]
+    product_column = next(
+        (column for column in ("product", "produce_name") if column in data.columns),
+        None,
+    )
+    required = ["sales_region", "quantity", "unit_price"]
     missing = [col for col in required if col not in data.columns]
+    if product_column is None:
+        missing.append("product or produce_name")
     if missing:
         print("Missing required columns:", ", ".join(missing))
         return
@@ -172,7 +176,7 @@ def show_sales_by_region_and_product(data):
     sales = data.assign(total_sales=data["quantity"] * data["unit_price"])
     pivot_table = pd.pivot_table(
         sales,
-        index=["sales_region", "product"],
+        index=["sales_region", product_column],
         values=["quantity", "total_sales"],
         aggfunc="sum",
     )
