@@ -1,34 +1,13 @@
-# Sales Dashboard User Guide
+# Assignment 2 
 
-Run `V4.py` from the repository root:
+This is the folder where I have put together my assignment 2 code.
 
-```text
-python Assignment_2/V4.py
-```
+The goal of this assignment is to create an interactive, text-based dashboard using Pandas pivot tables. 
 
-At startup, choose one of the following sources:
+In this program you will find two different sets of data to analyze and different ways to anaylze the data.
 
-- **Sales Data (online)**: the primary hosted CSV.
-- **Alternate sales data (Google Sheets)**: the alternate hosted CSV.
+In this assignment I was required to complete addtional requirements 3 and 8
+3. Create an alternate data set. Allow the user to select what sales data to load. 
+8. Add an analytic that shows sales by region and product, showing the percentage of the quantity and total sales per region and product.  This percentage should be a new column in the pivot table.
 
-The dashboard loads the selected CSV, then displays a menu of analyses. Enter
-the menu number to run an analysis; choose **Exit the program** to quit. If a
-data source cannot be loaded, the error is displayed and the dashboard stops
-rather than continuing with missing data.
-
-## Region and product percentages
-
-Choose **Sales by region and product with percentages**. The pivot table
-contains quantity and total sales (`quantity * unit_price`) for each region
-and product, plus:
-
-- `quantity_pct_of_region`: that product's share of the region's total quantity.
-- `sales_pct_of_region`: that product's share of the region's total sales.
-
-For example, if products in one region account for 20 and 30 units, their
-quantity percentages are 40% and 60%. Percentages are calculated separately
-within each region; each nonzero regional total therefore sums to 100%.
-Zero-value regional totals are shown as undefined percentages.
-
-The analytic recognizes either `product` or `produce_name` as the product
-column, so the two selectable datasets can use either name.
+Have Fun!
