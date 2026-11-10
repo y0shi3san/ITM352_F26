@@ -79,7 +79,7 @@ def display_initial_rows(data):
 
 def show_employees_by_region(data):
     """Print the number of unique employees in each sales region."""
-    counts = data.groupby("sales_region")["employee_id"].nunique()
+    counts = data.groupby("sales_region")["employee_name"].nunique()
     print("\nNumber of employees by region:")
     print(counts.to_string())
 
