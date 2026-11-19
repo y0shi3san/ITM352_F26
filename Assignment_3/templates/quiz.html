@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <h1>Question {{ question_number }}: {{ question }}</h1>
+    <!-- Show whether the previous answer was right or wrong. -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+            <p class="feedback {{ category }}" role="status">{{ message }}</p>
+        {% endfor %}
+    {% endwith %}
+
+    <!-- Count only submitted answers, so this advances after each response. -->
+    <label for="quiz-progress">
+        Progress: {{ completed_questions }} of {{ total_questions }} answered
+    </label><br>
+    <progress id="quiz-progress" value="{{ completed_questions }}" max="{{ total_questions }}"
+        style="width: 100%; max-width: 24rem;"></progress>
+
+    <!-- The timer shows how much time remains for this question. -->
+    <p id="countdown" role="timer" aria-live="off" data-seconds="{{ time_left }}">
+        Time left: {{ time_left }} seconds
+    </p>
+
+    <form id="quiz-form" method="POST">
+        <!-- JavaScript sets this field when the countdown reaches zero. -->
+        <input id="timed-out" type="hidden" name="timed_out" value="0">
+        {% for option in options %}
+            <label>
+                <input type="radio" name="answer" value="{{ option }}" required>
+                {{ option }}
+            </label><br>
+        {% endfor %}
+        <button type="submit">Submit Answer</button>
+    </form>
+
+    <script>
+        // Update the visible countdown once each second.
+        const timer = document.getElementById("countdown");
+        const form = document.getElementById("quiz-form");
+        const timeoutField = document.getElementById("timed-out");
+        let secondsLeft = Number(timer.dataset.seconds);
+
+        const countdown = window.setInterval(() => {
+            secondsLeft -= 1;
+            timer.textContent = `Time left: ${Math.max(secondsLeft, 0)} seconds`;
+
+            // Submit a timeout marker so the server can end the quiz.
+            if (secondsLeft <= 0) {
+                window.clearInterval(countdown);
+                timer.textContent = "Time is up!";
+                timeoutField.value = "1";
+                form.submit();
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+</head>
+<body>
+    <h1>Quiz Result</h1>
+    <p>Category: {{ category }}</p>
+    <!-- Show feedback for the final submitted answer, if there was one. -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+            <p class="feedback {{ category }}" role="status">{{ message }}</p>
+        {% endfor %}
+    {% endwith %}
+    {% if timed_out %}
+        <p>Time ran out. The quiz has ended.</p>
+    {% endif %}
+    <!-- Show how many questions were answered before the quiz ended. -->
+    <label for="quiz-progress">
+        Progress: {{ completed_questions }} of {{ max_questions }} answered
+    </label><br>
+    <progress id="quiz-progress" value="{{ completed_questions }}" max="{{ max_questions }}"
+        style="width: 100%; max-width: 24rem;"></progress>
+    <p>Your score: {{ score }} out of {{ max_questions }}</p>
+    <a href="{{ url_for('index') }}">Take Quiz Again</a>
+</body>
+</html>
