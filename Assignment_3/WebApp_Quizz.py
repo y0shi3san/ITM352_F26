@@ -15,7 +15,7 @@ app = Flask(__name__)
 # Set FLASK_SECRET_KEY in the environment when running outside local development.
 app.config["SECRET_KEY"] = os.environ.get("FLASK_SECRET_KEY", "dev-only-change-this")
 
-QUESTION_TIME_LIMIT = 15
+QUESTION_TIME_LIMIT = 30
 NUM_QUESTIONS_PER_QUIZ = 5
 
 # Reuse the question categories and answers from Assignment 1.
