@@ -2,7 +2,9 @@
 
 This assignemnts purpose is to start having hands on experiaence with HTML and design interfaces.
 
-Using my quizzes from assignment 1, I was about to transfer over the questions and category.
+Using my quizzes from assignment 1, I was able to transfer over the questions and category.
+
+Please use file "WebApp_Quizz.py" to run the program.
 
 My requirements numbers are 3 & 8: 
 3. Timer-Based Challenge Mode
